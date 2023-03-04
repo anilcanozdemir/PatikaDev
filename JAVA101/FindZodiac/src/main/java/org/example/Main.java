@@ -21,7 +21,7 @@ public class Main {
         {
             System.out.print("Kova Burcu");
         }
-        else if(month==2 && day<19)
+        else if(month==2 && day<20)
         {
             System.out.print("Kova Burcu");
         }
@@ -37,7 +37,7 @@ public class Main {
         {
             System.out.print("Koç Burcu");
         }
-        else if (month==4 && day<=20)
+        else if (month==4 && day<=21)
         {
             System.out.print("Koç Burcu");
         }
@@ -45,7 +45,7 @@ public class Main {
         {
             System.out.print("Boğa Burcu");
         }
-        else if(month==5 && day<=20)
+        else if(month==5 && day<=22)
         {
             System.out.print("Boğa Burcu");
         }
@@ -53,7 +53,7 @@ public class Main {
         {
             System.out.print("İkizler Burcu");
         }
-        else if(month==6 && day<=20)
+        else if(month==6 && day<=23)
         {
             System.out.print("İkizler Burcu");
         }
@@ -61,7 +61,7 @@ public class Main {
         {
             System.out.print("Yengeç  Burcu");
         }
-        else if(month==7 && day<=20)
+        else if(month==7 && day<=23)
         {
             System.out.print("Yengeç Burcu");
         }
@@ -69,7 +69,7 @@ public class Main {
         {
             System.out.print("Aslan  Burcu");
         }
-        else if(month==8 && day<=20)
+        else if(month==8 && day<=23)
         {
             System.out.print("Aslan Burcu");
         }
@@ -77,7 +77,7 @@ public class Main {
         {
             System.out.print("Başak Burcu");
         }
-        else if(month==9 && day<=20)
+        else if(month==9 && day<=23)
         {
             System.out.print("Başak Burcu");
         }
@@ -85,7 +85,7 @@ public class Main {
         {
             System.out.print("Terazi  Burcu");
         }
-        else if(month==10 && day<=20)
+        else if(month==10 && day<=23)
         {
             System.out.print("Terazi  Burcu");
         }
@@ -93,7 +93,7 @@ public class Main {
         {
             System.out.print("Akrep   Burcu");
         }
-        else if(month==11 && day<=20)
+        else if(month==11 && day<=22)
         {
             System.out.print("Akrep  Burcu");
         }
@@ -101,7 +101,7 @@ public class Main {
         {
             System.out.print("Yay   Burcu");
         }
-        else if(month==12 && day<=20)
+        else if(month==12 && day<=22)
         {
             System.out.print("Yay  Burcu");
         }
