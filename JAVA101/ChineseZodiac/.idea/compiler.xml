@@ -6,10 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ChineseZodiac" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Order3NumsWithIf" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>
