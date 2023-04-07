@@ -1,7 +1,7 @@
 package Characters;
 
 public class Samurai extends GameChar{
-    Samurai()
+    public Samurai()
     {
         this.setId(1);
         this.setDamage(5);

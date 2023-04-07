@@ -1,13 +1,30 @@
 package Player;
 
+import Items.Armors.Armor;
+import Items.Weapons.Weapon;
+
 public class Inventory {
     boolean water;
     boolean food;
     boolean firewood;
-    String weaponName;
-    String armorName;
-    int weaponDamage;
-    int armorDefence;
+    Weapon weapon;
+    Armor armor;
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
+    }
+
+    public Armor getArmor() {
+        return armor;
+    }
+
+    public void setArmor(Armor armor) {
+        this.armor = armor;
+    }
 
     public boolean isWater() {
         return water;
@@ -33,37 +50,7 @@ public class Inventory {
         this.firewood = firewood;
     }
 
-    public String getWeaponName() {
-        return weaponName;
-    }
 
-    public void setWeaponName(String weaponName) {
-        this.weaponName = weaponName;
-    }
-
-    public String getArmorName() {
-        return armorName;
-    }
-
-    public void setArmorName(String armorName) {
-        this.armorName = armorName;
-    }
-
-    public int getWeaponDamage() {
-        return weaponDamage;
-    }
-
-    public void setWeaponDamage(int weaponDamage) {
-        this.weaponDamage = weaponDamage;
-    }
-
-    public int getArmorDefence() {
-        return armorDefence;
-    }
-
-    public void setArmorDefence(int armorDefence) {
-        this.armorDefence = armorDefence;
-    }
 
 
     Inventory()
@@ -71,10 +58,8 @@ public class Inventory {
          water=false;
          food=false;
          firewood=false;
-         weaponName="NONE";
-         armorName="NONE";
-         weaponDamage=0;
-         armorDefence=0;
+         weapon=null;
+         armor=null;
     }
 
     public boolean checkGameItems() {

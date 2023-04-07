@@ -1,13 +1,16 @@
-package Locations;
+package Locations.BattleLocations;
 
+import Locations.Location;
 import Obstacles.Obstacle;
+import Player.Player;
 
 public abstract class BattleLoc extends Location {
     Obstacle obstacle;
-    BattleLoc()
-    {
-        throw new RuntimeException();
+
+    public BattleLoc(Player player) {
+        super(player);
     }
+
     @Override
     public boolean onLocation()
     {
@@ -17,4 +20,6 @@ public abstract class BattleLoc extends Location {
     {
         throw new RuntimeException();
     }
+
+
 }

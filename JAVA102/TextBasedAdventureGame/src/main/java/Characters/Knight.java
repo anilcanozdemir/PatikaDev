@@ -1,7 +1,7 @@
 package Characters;
 
 public class Knight extends GameChar {
-    Knight()
+   public Knight()
     {
         this.setId(3);
         this.setDamage(9);
