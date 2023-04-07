@@ -1,7 +1,9 @@
+package Locations;
+
 public class ToolStore extends NormalLoc {
     @Override
-    boolean onLocation() {
-        return super.onLocation();
+    public boolean onLocation() {
+        throw new RuntimeException();
     }
     void menu()
     {

@@ -1,5 +1,9 @@
+package Locations;
+
+import Obstacles.Vampire;
+
 public class Forest extends BattleLoc {
-    Forest( Vampire vampire)
+    public Forest(Vampire vampire)
     {
         throw new RuntimeException();
     }

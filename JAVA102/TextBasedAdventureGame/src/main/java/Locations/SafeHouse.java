@@ -1,6 +1,8 @@
+package Locations;
+
 public class SafeHouse extends NormalLoc {
     @Override
-    boolean onLocation() {
+    public boolean onLocation() {
         throw new RuntimeException();
     }
 }

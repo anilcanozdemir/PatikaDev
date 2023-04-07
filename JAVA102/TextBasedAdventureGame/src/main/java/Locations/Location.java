@@ -1,12 +1,14 @@
+package Locations;
+
+import Player.Player;
+
 public abstract class Location {
     Player player;
     String name;
-    Location()
-    {
+
+    Location() {
         throw new RuntimeException();
     }
 
-    private boolean onLocation() {
-        throw new RuntimeException();
-    }
+    public abstract boolean onLocation();
 }
