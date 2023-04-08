@@ -11,12 +11,12 @@ import Player.Player;
 import java.util.Scanner;
 
 public class ToolStore extends NormalLoc {
-    private LightArmor lightArmor ;
-    private   MediumArmor mediumArmor ;
-    private   HeavyArmor heavyArmor;
-    private  Rifle rifle ;
-    private Sword sword ;
-    private Pistol pistol;
+    private final LightArmor lightArmor ;
+    private final MediumArmor mediumArmor ;
+    private final HeavyArmor heavyArmor;
+    private final Rifle rifle ;
+    private final Sword sword ;
+    private final Pistol pistol;
     public ToolStore(Player player) {
         super(player);
         this.setName("ToolStore");
@@ -69,76 +69,62 @@ public class ToolStore extends NormalLoc {
        switch (type)
        {
            case 1:
-               switch (itemId)
-               {
-                   case 1:
-                       if(pistol.getCost()<getPlayer().getMoney())
-                       {
-                           getPlayer().setMoney(getPlayer().getMoney()-pistol.getCost());
+               switch (itemId) {
+                   case 1 -> {
+                       if (pistol.getCost() < getPlayer().getMoney()) {
+                           getPlayer().setMoney(getPlayer().getMoney() - pistol.getCost());
                            getPlayer().getInventory().setWeapon(pistol);
-                       }
-                       else
-                       {
+                       } else {
                            System.out.println("PARAN BUNA YETMİYOR SAVAŞÇI GİT BİRAZ PARA BUL BANA");
                        }
-                   case 2:
-                       if(sword.getCost()<getPlayer().getMoney())
-                       {
-                           getPlayer().setMoney(getPlayer().getMoney()-sword.getCost());
+                   }
+                   case 2 -> {
+                       if (sword.getCost() < getPlayer().getMoney()) {
+                           getPlayer().setMoney(getPlayer().getMoney() - sword.getCost());
                            getPlayer().getInventory().setWeapon(sword);
-                       }
-                       else
-                       {
+                       } else {
                            System.out.println("PARAN BUNA YETMİYOR SAVAŞÇI GİT BİRAZ PARA BUL BANA");
 
                        }
-                   case 3:
-                       if(rifle.getCost()<getPlayer().getMoney())
-                       {
-                           getPlayer().setMoney(getPlayer().getMoney()-rifle.getCost());
+                   }
+                   case 3 -> {
+                       if (rifle.getCost() < getPlayer().getMoney()) {
+                           getPlayer().setMoney(getPlayer().getMoney() - rifle.getCost());
                            getPlayer().getInventory().setWeapon(rifle);
-                       }
-                       else
-                       {
+                       } else {
                            System.out.println("PARAN BUNA YETMİYOR SAVAŞÇI GİT BİRAZ PARA BUL BANA");
 
                        }
+                   }
                }
            case 2:
-               switch (itemId)
-               {
-                   case 1:
-                       if(lightArmor.getCost()<getPlayer().getMoney())
-                       {
-                           getPlayer().setMoney(getPlayer().getMoney()-lightArmor.getCost());
+               switch (itemId) {
+                   case 1 -> {
+                       if (lightArmor.getCost() < getPlayer().getMoney()) {
+                           getPlayer().setMoney(getPlayer().getMoney() - lightArmor.getCost());
                            getPlayer().getInventory().setArmor(lightArmor);
-                       }
-                       else
-                       {
+                       } else {
                            System.out.println("PARAN BUNA YETMİYOR SAVAŞÇI GİT BİRAZ PARA BUL BANA");
                        }
-                   case 2:
-                       if(mediumArmor.getCost()<getPlayer().getMoney())
-                       {
-                           getPlayer().setMoney(getPlayer().getMoney()-mediumArmor.getCost());
+                   }
+                   case 2 -> {
+                       if (mediumArmor.getCost() < getPlayer().getMoney()) {
+                           getPlayer().setMoney(getPlayer().getMoney() - mediumArmor.getCost());
                            getPlayer().getInventory().setArmor(mediumArmor);
-                       }
-                       else
-                       {
+                       } else {
                            System.out.println("PARAN BUNA YETMİYOR SAVAŞÇI GİT BİRAZ PARA BUL BANA");
 
                        }
-                   case 3:
-                       if(heavyArmor.getCost()<getPlayer().getMoney())
-                       {
-                           getPlayer().setMoney(getPlayer().getMoney()-heavyArmor.getCost());
+                   }
+                   case 3 -> {
+                       if (heavyArmor.getCost() < getPlayer().getMoney()) {
+                           getPlayer().setMoney(getPlayer().getMoney() - heavyArmor.getCost());
                            getPlayer().getInventory().setArmor(heavyArmor);
-                       }
-                       else
-                       {
+                       } else {
                            System.out.println("PARAN BUNA YETMİYOR SAVAŞÇI GİT BİRAZ PARA BUL BANA");
 
                        }
+                   }
                }
        }
     }
