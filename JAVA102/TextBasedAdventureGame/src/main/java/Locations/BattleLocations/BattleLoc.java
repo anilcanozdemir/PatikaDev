@@ -43,8 +43,6 @@ public abstract class BattleLoc extends Location {
         {
             FoeHps[i]=obstacle.getHealth();
         }
-        int[] temp=new int[obstacle.getQuantity()];
-        Arrays.fill(temp,0);
         int index=0;
         while(index<FoeHps.length)
         {
@@ -52,7 +50,13 @@ public abstract class BattleLoc extends Location {
             System.out.println(getPlayer().getName()+" "+obstacle.getName()+" e "+getPlayer().getDamage()+"kadar vuruyor ve rakibin canı"+FoeHps[index]+"kalıyor.");
             if (FoeHps[index]>0)
             {
-                getPlayer().setHealth(getPlayer().getHealth()-obstacle.getDamage());
+                int foedamage=obstacle.getDamage();
+                if(getPlayer().getInventory().getArmor()!=null)
+                     foedamage=obstacle.getDamage()-getPlayer().getInventory().getArmor().getDefencePoints();
+
+                if(foedamage<0)
+                    foedamage=0;
+                getPlayer().setHealth(getPlayer().getHealth()-foedamage);
 
                 if(getPlayer().getHealth()<=0)
                 {

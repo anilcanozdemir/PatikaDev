@@ -15,7 +15,7 @@ public  class River extends BattleLoc {
     protected void reward() {
         if(!getPlayer().getInventory().isWater())
         {
-            System.out.println(this.getName()+" dan Yemeği aldın.");
+            System.out.println(this.getName()+" dan SUYU aldın.");
             getPlayer().getInventory().setWater(true);
         }
     }

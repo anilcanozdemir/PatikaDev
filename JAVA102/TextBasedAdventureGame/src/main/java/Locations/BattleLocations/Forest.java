@@ -14,7 +14,7 @@ public class Forest extends BattleLoc {
     protected void reward() {
         if(!getPlayer().getInventory().isFirewood())
         {
-            System.out.println(this.getName()+" dan Yemeği aldın.");
+            System.out.println(this.getName()+" dan ODUN aldın.");
             getPlayer().getInventory().setFirewood(true);
         }
     }

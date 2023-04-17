@@ -16,7 +16,7 @@ public class Cave extends BattleLoc {
     protected void reward() {
         if(!getPlayer().getInventory().isFood())
         {
-            System.out.println(this.getName()+" dan Yemeği aldın.");
+            System.out.println(this.getName()+" dan YEMEK aldın.");
             getPlayer().getInventory().setFood(true);
         }
     }
