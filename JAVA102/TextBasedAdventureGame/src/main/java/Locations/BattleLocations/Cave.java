@@ -7,6 +7,17 @@ public class Cave extends BattleLoc {
     public Cave(Zombie zombie, Player player)
     {
         super(player);
-        throw new RuntimeException();
+        this.setObstacle(zombie);
+        this.setName("Mağara");
+
+    }
+
+    @Override
+    protected void reward() {
+        if(!getPlayer().getInventory().isFood())
+        {
+            System.out.println(this.getName()+" dan Yemeği aldın.");
+            getPlayer().getInventory().setFood(true);
+        }
     }
 }

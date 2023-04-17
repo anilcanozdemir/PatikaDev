@@ -7,6 +7,15 @@ public class Forest extends BattleLoc {
     public Forest(Vampire vampire, Player player)
     {
         super(player);
-        throw new RuntimeException();
+        this.setObstacle(vampire);
+        this.setName("Orman");
+    }
+    @Override
+    protected void reward() {
+        if(!getPlayer().getInventory().isFirewood())
+        {
+            System.out.println(this.getName()+" dan Yemeği aldın.");
+            getPlayer().getInventory().setFirewood(true);
+        }
     }
 }

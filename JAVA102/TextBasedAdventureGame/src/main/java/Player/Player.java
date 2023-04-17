@@ -38,6 +38,10 @@ public class Player {
         this.gameChar = gameChar;
     }
     public int getDamage() {
+        if(getInventory().getWeapon()!=null)
+        {
+            return damage+getInventory().getWeapon().getDamagePoints();
+        }
         return damage;
     }
 
