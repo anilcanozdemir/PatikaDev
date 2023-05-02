@@ -53,8 +53,17 @@ public class ToolStore extends NormalLoc {
                 System.out.println("1." + pistol.getName() + "\t" + pistol.getDamagePoints() + "\t" + pistol.getCost());
                 System.out.println("2." + sword.getName() + "\t" + sword.getDamagePoints() + "\t" + sword.getCost());
                 System.out.println("3." + rifle.getName() + "\t" + rifle.getDamagePoints() + "\t" + rifle.getCost());
-                System.out.println("HANGİSİNİ ALMAK İSTERSİN ?");
-                buy(1, (scanner.nextInt()));
+                if (getPlayer().getInventory().getWeapon()!=null)
+                    System.out.println("Sende var olan siah     :" + getPlayer().getInventory().getWeapon().getName() + "\t" + getPlayer().getInventory().getWeapon().getDamagePoints() + "\t");
+                System.out.println("Almak istediğine emin misin?");
+                System.out.println("1.EVET");
+                System.out.println("2.HAYIR");
+                if(scanner.nextInt()==1)
+                {
+                    System.out.println("HANGİSİNİ ALMAK İSTERSİN ?");
+                    buy(1, (scanner.nextInt()));
+                }
+
             }
             case 2 -> {
                 System.out.println("ZIRHLAR\tHASAR\tPARA");
@@ -62,8 +71,17 @@ public class ToolStore extends NormalLoc {
                 System.out.println("1." + lightArmor.getName() + "\t" + lightArmor.getDefencePoints() + "\t" + lightArmor.getCost());
                 System.out.println("2." + mediumArmor.getName() + "\t" + mediumArmor.getDefencePoints() + "\t" + mediumArmor.getCost());
                 System.out.println("3." + heavyArmor.getName() + "\t" + heavyArmor.getDefencePoints() + "\t" + heavyArmor.getCost());
-                System.out.println("HANGİSİNİ ALMAK İSTERSİN ?");
-                buy(2, (scanner.nextInt()));
+                if (getPlayer().getInventory().getArmor()!=null)
+                    System.out.println("Sende var olan zırh     :" + getPlayer().getInventory().getArmor().getName() + "\t" + getPlayer().getInventory().getArmor().getDefencePoints() + "\t");
+
+                System.out.println("Almak istediğine emin misin?");
+                System.out.println("1.EVET");
+                System.out.println("2.HAYIR");
+                if(scanner.nextInt()==1)
+                {
+                    System.out.println("HANGİSİNİ ALMAK İSTERSİN ?");
+                    buy(2, (scanner.nextInt()));
+                }
             }
         }
 
